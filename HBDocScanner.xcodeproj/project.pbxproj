@@ -6,13 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		274FB3452D79AF30002B11C3 /* DocumentReader.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F20DFC2D799EF800081B9F /* DocumentReader.xcframework */; };
+		98A8DB2BBFC42E5CD3E28E26 /* Pods_HBDocScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5175541544FAE6C4031801 /* Pods_HBDocScanner.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		274FB3432D79AF2E002B11C3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		27F20D982D79829D00081B9F /* HBDocScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HBDocScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27F20DFC2D799EF800081B9F /* DocumentReader.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:H6WR54S268:Regula Forensics, Inc"; lastKnownFileType = wrapper.xcframework; name = DocumentReader.xcframework; path = Pods/DocumentReader/DocumentReader.xcframework; sourceTree = "<group>"; };
+		27F20DFE2D799EF800081B9F /* DocumentReaderCore.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:H6WR54S268:Regula Forensics, Inc"; lastKnownFileType = wrapper.xcframework; name = DocumentReaderCore.xcframework; path = Pods/DocumentReaderFullRFID/DocumentReaderCore.xcframework; sourceTree = "<group>"; };
+		27F20E002D799EF800081B9F /* RegulaCommon.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:H6WR54S268:Regula Forensics, Inc"; lastKnownFileType = wrapper.xcframework; name = RegulaCommon.xcframework; path = Pods/RegulaCommon/RegulaCommon.xcframework; sourceTree = "<group>"; };
+		2A5175541544FAE6C4031801 /* Pods_HBDocScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HBDocScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9FF93FE93A20C972F8A913 /* Pods-HBDocScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBDocScanner.release.xcconfig"; path = "Target Support Files/Pods-HBDocScanner/Pods-HBDocScanner.release.xcconfig"; sourceTree = "<group>"; };
+		EC299CA45547009D54EDD8AE /* Pods-HBDocScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBDocScanner.debug.xcconfig"; path = "Target Support Files/Pods-HBDocScanner/Pods-HBDocScanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		27F20D9F2D79829D00081B9F /* Exceptions for "HBDocScanner" folder in "HBDocScanner" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			platformFiltersByRelativePath = {
+				XCFrameworkIntermediates/DocumentReader/DocumentReader.framework = (ios, );
+				XCFrameworkIntermediates/DocumentReaderFullRFID/DocumentReaderCore.framework = (ios, );
+				XCFrameworkIntermediates/RegulaCommon/RegulaCommon.framework = (ios, );
+			};
 			publicHeaders = (
 				HBDocScanner.h,
 			);
@@ -20,11 +49,34 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		274FB40B2D79B92A002B11C3 /* Exceptions for "HBDocScanner" folder in "Embed Frameworks" phase from "HBDocScanner" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				XCFrameworkIntermediates/DocumentReader/DocumentReader.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				XCFrameworkIntermediates/DocumentReaderFullRFID/DocumentReaderCore.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				XCFrameworkIntermediates/RegulaCommon/RegulaCommon.framework = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = 274FB3432D79AF2E002B11C3 /* Embed Frameworks */;
+			membershipExceptions = (
+				XCFrameworkIntermediates/DocumentReader/DocumentReader.framework,
+				XCFrameworkIntermediates/DocumentReaderFullRFID/DocumentReaderCore.framework,
+				XCFrameworkIntermediates/RegulaCommon/RegulaCommon.framework,
+			);
+			platformFiltersByRelativePath = {
+				XCFrameworkIntermediates/DocumentReader/DocumentReader.framework = (ios, );
+				XCFrameworkIntermediates/DocumentReaderFullRFID/DocumentReaderCore.framework = (ios, );
+				XCFrameworkIntermediates/RegulaCommon/RegulaCommon.framework = (ios, );
+			};
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		27F20D9A2D79829D00081B9F /* HBDocScanner */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				27F20D9F2D79829D00081B9F /* Exceptions for "HBDocScanner" folder in "HBDocScanner" target */,
+				274FB40B2D79B92A002B11C3 /* Exceptions for "HBDocScanner" folder in "Embed Frameworks" phase from "HBDocScanner" target */,
 			);
 			path = HBDocScanner;
 			sourceTree = "<group>";
@@ -36,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				274FB3452D79AF30002B11C3 /* DocumentReader.xcframework in Frameworks */,
+				98A8DB2BBFC42E5CD3E28E26 /* Pods_HBDocScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +101,8 @@
 			children = (
 				27F20D9A2D79829D00081B9F /* HBDocScanner */,
 				27F20D992D79829D00081B9F /* Products */,
+				FFE3E39CBE4615768B285E4C /* Pods */,
+				5640ADFAE9DBAF2FEA4CA8B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +112,26 @@
 				27F20D982D79829D00081B9F /* HBDocScanner.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5640ADFAE9DBAF2FEA4CA8B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27F20DFC2D799EF800081B9F /* DocumentReader.xcframework */,
+				27F20DFE2D799EF800081B9F /* DocumentReaderCore.xcframework */,
+				27F20E002D799EF800081B9F /* RegulaCommon.xcframework */,
+				2A5175541544FAE6C4031801 /* Pods_HBDocScanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFE3E39CBE4615768B285E4C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC299CA45547009D54EDD8AE /* Pods-HBDocScanner.debug.xcconfig */,
+				9E9FF93FE93A20C972F8A913 /* Pods-HBDocScanner.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,10 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27F20DA02D79829D00081B9F /* Build configuration list for PBXNativeTarget "HBDocScanner" */;
 			buildPhases = (
+				5F31CD3EAAF6F8EF5A40D5A2 /* [CP] Check Pods Manifest.lock */,
 				27F20D932D79829D00081B9F /* Headers */,
 				27F20D942D79829D00081B9F /* Sources */,
 				27F20D952D79829D00081B9F /* Frameworks */,
 				27F20D962D79829D00081B9F /* Resources */,
+				274FB3432D79AF2E002B11C3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -88,8 +166,6 @@
 				27F20D9A2D79829D00081B9F /* HBDocScanner */,
 			);
 			name = HBDocScanner;
-			packageProductDependencies = (
-			);
 			productName = HBDocScanner;
 			productReference = 27F20D982D79829D00081B9F /* HBDocScanner.framework */;
 			productType = "com.apple.product-type.framework";
@@ -137,6 +213,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5F31CD3EAAF6F8EF5A40D5A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HBDocScanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27F20D942D79829D00081B9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -150,6 +251,7 @@
 /* Begin XCBuildConfiguration section */
 		27F20DA12D79829D00081B9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC299CA45547009D54EDD8AE /* Pods-HBDocScanner.debug.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -160,9 +262,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HBDocScanner",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/DocumentReader",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/RegulaCommon",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/DocumentReaderFullRFID",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -183,6 +293,7 @@
 		};
 		27F20DA22D79829D00081B9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E9FF93FE93A20C972F8A913 /* Pods-HBDocScanner.release.xcconfig */;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -193,9 +304,17 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HBDocScanner",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/DocumentReader",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/RegulaCommon",
+					"$(PROJECT_DIR)/HBDocScanner/XCFrameworkIntermediates/DocumentReaderFullRFID",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
